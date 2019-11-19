@@ -20,6 +20,13 @@ def after_request(response):
     g.db.close()
     return response
 
+
+CORS(post, origins=['http://localhost:3000'], support_credentials=True)
+app.register_blueprint(post, url_prefix='/api/v1/posts')
+
+CORS(user, origins=['http://localhost:3000'], support_credentials=True)
+app.register_blueprint(user, url_prefix='/api/v1/users')
+
 @app.route('/')
 def index():
     return 'What is up George'
