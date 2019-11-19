@@ -1,5 +1,5 @@
-from flask import Flask, g
 import models
+from flask import Flask, g
 from flask_cors import CORS
 
 from resources.posts import post
