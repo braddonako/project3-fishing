@@ -8,7 +8,7 @@ from playhouse.shortcuts import model_to_dict
 
 user = Blueprint('users', 'user')
 
-@user.route('/register', methods='POST')
+@user.route('/register', methods=['POST'])
 def register():
     payload = request.get_json()
     
@@ -32,14 +32,14 @@ def register():
         return jsonify(data=user_dict, status={'code': 201, 'message': 'User created'})
 
 
-@user.route('/login', methods='POST')
+@user.route('/login', methods=['POST'])
 def login():
     payload = request.get_json()
     try:
         user = models.User.get(models.User.email **payload['email'])
         user_dict = model_to_dict(user)
 
-        if (check_password_hash(user_dict['password'], payload['password']))
+        if (check_password_hash(user_dict['password'], payload['password'])):
             del user_dict['password']
             login_user(user)
             print('user is: ', user)
