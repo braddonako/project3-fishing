@@ -1,5 +1,9 @@
 from flask import Flask, g
 import models
+from flask_cors import CORS
+
+from resources.posts import post
+from resources.users import user
 
 DEBUG = True
 PORT = 8000
