@@ -11,7 +11,7 @@ class User(Model):
         db_table = 'users'
         database = DATABASE
 
-class Posts(Model):
+class Post(Model):
     img = CharField()
     nameOfFish = CharField()
     description = CharField()
@@ -21,7 +21,7 @@ class Posts(Model):
         db_table ='posts'
         database = DATABASE
 
-# class Rivers(Model):
+# class River(Model):
 #     nameOfRiver = CharField()
 #     location = CharField()
 
@@ -29,6 +29,6 @@ class Posts(Model):
 
 def initialize():
     DATABASE.connect()
-    DATABASE.create_tables([User], safe=True)
+    DATABASE.create_tables([User, Post], safe=True)
     print('Tables created')
     DATABASE.close()
