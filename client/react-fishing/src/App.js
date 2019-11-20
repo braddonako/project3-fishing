@@ -12,6 +12,7 @@ const My404 = () => {
    </div>
  )
 }
+
 function App() {
  return (
    <main>
