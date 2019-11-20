@@ -18,4 +18,4 @@ Stretch Goal
 
 Have GPS populate a pin in the map of where they began their excursion
 Have fisherman have ability to create a new river
-Have fisherman be able to comment and ask questions on other fishermans entries
+Have fisherman be able to comment and ask questions on other fishermans entries - 
