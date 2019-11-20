@@ -36,7 +36,7 @@ class Register extends Component {
     
       if (parsedResponse.status.code === 201) {
         console.log('Sign up successful');
-        this.props.history.push('/post'); // Change url to /dogs programmatically with react-router
+        this.props.history.push('/posts'); // Change url to /dogs programmatically with react-router
       } else {
         // Else display error message to the user
         this.setState({
